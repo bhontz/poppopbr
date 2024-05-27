@@ -1,32 +1,53 @@
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import NominateForm from "../components/Nominate";
 import DonateForm from "../components/Donate";
-import UncontrolledExample from "../components/Carousel";
+import ImageCarousel from "../components/Carousel";
 import OurNavBar from "../components/Navbar";
 
 function Home() {
   return (
-    <div className="container-xl my-5">
-      <div className="row">
+    <Container fluid="xl">
+      <Row>
         <OurNavBar />
-      </div>
-      <div className="row">
-        <div className="col">
+      </Row>
+      <Row>
+        <Col>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+            consequuntur porro ea in debitis similique nihil blanditiis culpa!
+            Sit a sed voluptas veniam nam, eveniet officia delectus. Molestiae,
+            velit sunt!
+          </p>
+        </Col>
+        <Col>
+          <ImageCarousel />
+        </Col>
+      </Row>
+      <Row>
+        <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
           consequuntur porro ea in debitis similique nihil blanditiis culpa! Sit
           a sed voluptas veniam nam, eveniet officia delectus. Molestiae, velit
           sunt!
-        </div>
-        <div className="col">
-          <UncontrolledExample />
-        </div>
-      </div>
-      <div className="row">
-        <DonateForm title="Donate" />
-      </div>
-      <div className="row">
-        <NominateForm title="Nominate" />
-      </div>
-    </div>
+        </p>
+      </Row>
+      <Row>
+        <DonateForm title="Donate"></DonateForm>
+      </Row>
+      <Row>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+          consequuntur porro ea in debitis similique nihil blanditiis culpa! Sit
+          a sed voluptas veniam nam, eveniet officia delectus. Molestiae, velit
+          sunt!
+        </p>
+      </Row>
+      <Row>
+        <NominateForm title="Nomitate"></NominateForm>
+      </Row>
+    </Container>
   );
 }
 

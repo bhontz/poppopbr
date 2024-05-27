@@ -11,8 +11,7 @@ function OurNavBar() {
             <img
               alt="logo"
               src="https://res.cloudinary.com/dpeqsj31d/image/upload/v1707263738/avatar_4_4.png"
-              width="50"
-              height="50"
+              width="80"
               className="d-inline-block align-text-middle"
             />{" "}
             Navbar

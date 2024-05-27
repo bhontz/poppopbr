@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container";
 import type { Schema } from "../../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import Button from "react-bootstrap/Button";
@@ -29,7 +30,7 @@ function NominateForm({ title }: Props) {
   };
 
   return (
-    <div>
+    <Container>
       <h3>{title}</h3>
       <Form onSubmit={submitNominateForm}>
         <Form.Group className="mb-3" controlId="NominateFormFullName">
@@ -52,7 +53,7 @@ function NominateForm({ title }: Props) {
           Nominate
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 }
 

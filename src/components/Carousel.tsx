@@ -1,31 +1,32 @@
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 
-function UncontrolledExample() {
+function ImageCarousel() {
   return (
     <Carousel interval={null} slide={false}>
       <Carousel.Item>
-        <img
-          className="d-block w-60"
+        <Image
           src="https://res.cloudinary.com/dpeqsj31d/image/upload/v1707263739/avatar_2_2.png"
-          alt="First slide"
+          width="300"
+          fluid
         />
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-60"
+        <Image
           src="https://res.cloudinary.com/dpeqsj31d/image/upload/v1707263739/avatar_2_3.png"
-          alt="Second slide"
+          width="300"
+          fluid
         />
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-60"
+        <Image
           src="https://res.cloudinary.com/dpeqsj31d/image/upload/v1707263739/avatar_2_4.png"
-          alt="Third slide"
+          width="300"
+          fluid
         />
       </Carousel.Item>
     </Carousel>
   );
 }
 
-export default UncontrolledExample;
+export default ImageCarousel;

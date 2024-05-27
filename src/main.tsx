@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
-import "./index.css";
+// import "./index.css";
 
 Amplify.configure(outputs);
 

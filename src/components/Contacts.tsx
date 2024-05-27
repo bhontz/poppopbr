@@ -1,8 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import CloseButton from "react-bootstrap/CloseButton";
 
 function Contacts() {
   const name = "Brad";
+  const navigate = useNavigate();
   let message;
+
+  function handleClick() {
+    navigate("/");
+  }
 
   if (name) {
     message = <h1>Hey {name} this will be the CONTACTS page</h1>;
@@ -11,10 +18,10 @@ function Contacts() {
   }
 
   return (
-    <div className="container-xl my-5">
+    <Container>
+      <CloseButton onClick={handleClick} />
       {message}
-      <NavLink to="/">Return</NavLink>
-    </div>
+    </Container>
   );
 }
 
