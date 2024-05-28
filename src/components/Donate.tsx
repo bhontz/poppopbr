@@ -1,14 +1,14 @@
-import Container from "react-bootstrap/Container";
+import { ReactNode } from "react";
+import { Container, Button, Form } from "react-bootstrap";
 import type { Schema } from "../../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 
 interface Props {
   title: string;
+  children: ReactNode;
 }
 
-function DonateForm({ title }: Props) {
+function DonateForm({ title, children }: Props) {
   const client = generateClient<Schema>();
 
   const submitDonateForm = async (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -30,8 +30,9 @@ function DonateForm({ title }: Props) {
   };
 
   return (
-    <Container>
+    <Container className="donateblock p-3">
       <h3>{title}</h3>
+      {children}
       <Form onSubmit={submitDonateForm}>
         <Form.Group className="mb-3" controlId="DontateFormFullName">
           <Form.Label className="form-label">Your Name:</Form.Label>

@@ -1,14 +1,14 @@
-import Container from "react-bootstrap/Container";
+import { ReactNode } from "react";
+import { Container, Button, Form } from "react-bootstrap";
 import type { Schema } from "../../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 
 interface Props {
   title: string;
+  children: ReactNode;
 }
 
-function NominateForm({ title }: Props) {
+function NominateForm({ title, children }: Props) {
   const client = generateClient<Schema>();
 
   const submitNominateForm = async (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -30,8 +30,9 @@ function NominateForm({ title }: Props) {
   };
 
   return (
-    <Container>
+    <Container className="nominateblock p-3">
       <h3>{title}</h3>
+      {children}
       <Form onSubmit={submitNominateForm}>
         <Form.Group className="mb-3" controlId="NominateFormFullName">
           <Form.Label className="form-label">Your Name:</Form.Label>
